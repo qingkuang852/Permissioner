@@ -1,7 +1,7 @@
 plugins {
     id 'com.android.library'
-	id 'android-maven'
-    id 'org.jetbrains.kotlin.android'
+	id 'kotlin-android'
+    id 'maven-publish
 }
 
 android {
@@ -23,22 +23,19 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+	afterEvaluate {
+        publishing {
+            publications {
+                release(MavenPublication) {
+                    from components.release
+                }
+            }
+        }
+    }
 }
 
 dependencies {
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
-}
-
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            groupId = 'com.qingkuang'
-            artifactId = 'permissioner'
-            version = '1.0.0'
-
-            from components.java
-        }
-    }
 }
