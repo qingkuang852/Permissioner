@@ -19,3 +19,11 @@ Step 2. Add the dependency
 	dependencies {
 	        implementation 'com.github.qingkuang852:Permissioner:Tag'
 	}
+
+Step 3. How to use in code
+
+	Permissioner(arrayOf(android.Manifest.permission.READ_CALENDAR)).apply {
+		    registerLauncher(this@MainActivity)
+		}.launch { _, _ ->
+		    Toast.makeText(this, "granted", Toast.LENGTH_SHORT).show()
+		}
