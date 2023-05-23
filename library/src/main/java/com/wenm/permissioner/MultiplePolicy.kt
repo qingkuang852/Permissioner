@@ -1,12 +1,9 @@
-package com.qingkuang.permissioner
+package com.wenm.permissioner
 
 import android.content.Intent
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.FragmentActivity
-import com.wenm.permissioner.PermissionPolicy
-import com.wenm.permissioner.checkPermissionsAllGrantedOrNot
-import com.wenm.permissioner.goToSetting
 
 class MultiplePolicy(permissions: Array<String>) : PermissionPolicy(permissions){
 

@@ -1,7 +1,6 @@
 package com.wenm.permissioner
 
 import androidx.fragment.app.FragmentActivity
-import com.qingkuang.permissioner.*
 
 class Permissioner(
     permissions: Array<String>,
